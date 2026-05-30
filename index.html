@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EssayConsultant — Expert Online consultanting</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/style.css">
+<script src="/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Essay<span>Editors</span></div>
+    <button class="nav-cta" onclick="openBooking()">Book a session</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="background:var(--cream)">
+  <div class="hero">
+    <div>
+      <div class="hero-badge">&#x1F4DA; Trusted by 12,000+ students</div>
+      <h1>Essays edited by the <em>best consultant</em>, on your schedule</h1>
+      <p>Connect with an expert consultant for top 20 Universities, State Colleges, and more. One-on-one online sessions tailored to your goals. Book in minutes!</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="scrollToBooking()">Schedule a session</button>
+        <button class="btn-outline" onclick="document.getElementById('consultants').scrollIntoView({behavior:'smooth'})">Meet our consultants</button>
+      </div>
+      <div class="stats">
+        <div class="stat-item"><div class="num">4.9★</div><div class="lbl">Avg. consultant rating</div></div>
+        <div class="stat-item"><div class="num">500+</div><div class="lbl">Expert consultant</div></div>
+        <div class="stat-item"><div class="num">48h</div><div class="lbl">Avg. response time</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-stat"><div class="big">98%</div><div class="sm">Satisfaction rate</div></div>
+      <div class="rating-card">
+        <div class="consultant-img">DR</div>
+        <div class="consultant-name">Dyllan Zhou</div>
+        <div class="consultant-subject">Neuroscience • Johns Hopkins University</div>
+        <div class="stars">★★★★★</div>
+        <div class="consultant-bio">"Dyllan has a talent for delivering a great essay. I was able to get into Harvard because of him."</div>
+        <div class="avail-badge"><div class="avail-dot"></div>Available this week</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- consultantS -->
+<div class="divider"></div>
+<section class="section" id="consultants">
+  <div class="section-label">Featured educators</div>
+  <div class="section-title">Meet our top consultants</div>
+  <div class="section-sub">Vetted experts with proven track records</div>
+  <div class="consultants-grid">
+    <div class="consultant-card">
+      <div class="consultant-avatar" style="background:linear-gradient(135deg,#1d7a6b,#25a08e)">RK</div>
+      <div class="t-name">Dyllan Zhou</div>
+      <div class="t-subject">Johns Hopkins University</div>
+      <div><span class="t-stars">★★★★★</span><span class="t-rating">5.0 (214 reviews)</span></div>
+      <div class="t-bio">Johns Hopkins University 6 years essay consulting experience. Specializes in delivering a clear and concise message.</div>
+      <div class="t-rate">From <span>$65/hr</span></div>
+      <button class="t-book" onclick="openBookingFor('Dr. Rachel Kim','Calculus & Linear Algebra')">Book a session</button>
+    </div>
+    <!-- <div class="consultant-card">
+      <div class="consultant-avatar" style="background:linear-gradient(135deg,#c9963a,#e8b84a)">MJ</div>
+      <div class="t-name">Marcus Johnson</div>
+      <div class="t-subject">AP Chemistry & Biology</div>
+      <div><span class="t-stars">★★★★★</span><span class="t-rating">4.9 (189 reviews)</span></div>
+      <div class="t-bio">Stanford grad, former lab researcher. Makes science engaging through real-world applications and hands-on examples.</div>
+      <div class="t-rate">From <span>$55/hr</span></div>
+      <button class="t-book" onclick="openBookingFor('Marcus Johnson','AP Chemistry & Biology')">Book a session</button>
+    </div>
+    <div class="consultant-card">
+      <div class="consultant-avatar" style="background:linear-gradient(135deg,#534ab7,#7f77dd)">SP</div>
+      <div class="t-name">Sofia Patel</div>
+      <div class="t-subject">SAT/ACT & College Essays</div>
+      <div><span class="t-stars">★★★★★</span><span class="t-rating">4.9 (302 reviews)</span></div>
+      <div class="t-bio">Columbia grad. Has helped 200+ students earn spots at Ivy League schools. Perfect SAT score in 2019.</div>
+      <div class="t-rate">From <span>$70/hr</span></div>
+      <button class="t-book" onclick="openBookingFor('Sofia Patel','SAT/ACT & College Essays')">Book a session</button>
+    </div>
+    <div class="consultant-card">
+      <div class="consultant-avatar" style="background:linear-gradient(135deg,#d85a30,#ef9f27)">TL</div>
+      <div class="t-name">Thomas Lee</div>
+      <div class="t-subject">Python & Web Development</div>
+      <div><span class="t-stars">★★★★★</span><span class="t-rating">4.8 (157 reviews)</span></div>
+      <div class="t-bio">Senior software engineer at a Fortune 500. Teaches Python, JavaScript, React, and system design from beginner to advanced.</div>
+      <div class="t-rate">From <span>$75/hr</span></div>
+      <button class="t-book" onclick="openBookingFor('Thomas Lee','Python & Web Development')">Book a session</button>
+    </div> -->
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<div class="divider"></div>
+<section class="section" id="how">
+  <div class="section-label">Simple process</div>
+  <div class="section-title">How EssayConsultant works</div>
+  <div class="section-sub">From signup to your first session in under 10 minutes</div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-title">Browse & choose</div>
+      <div class="step-desc">Explore consultant profiles, read reviews, and find the perfect match for your subject and learning style.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-title">Schedule your session</div>
+      <div class="step-desc">Pick a date and time that works for you. Sessions are flexible — morning, evening, or weekends.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-title">Learn & grow</div>
+      <div class="step-desc">Meet your consultant via video call. Get personalized instruction, resources, and follow-up support.</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking-section" id="booking">
+  <div class="booking-inner">
+    <div class="booking-info">
+      <h2>Schedule your first session</h2>
+      <p>Fill out the form and we'll connect you with the right consultant within 24 hours. First session satisfaction is guaranteed.</p>
+      <div class="booking-perk">
+        <div class="perk-icon">✓</div>
+        <div class="perk-text"><strong>Free 15-min intro call</strong>Meet your consultant before committing</div>
+      </div>
+      <div class="booking-perk">
+        <div class="perk-icon">🔒</div>
+        <div class="perk-text"><strong>Satisfaction guarantee</strong>Full refund if not happy with your first session</div>
+      </div>
+      <div class="booking-perk">
+        <div class="perk-icon">⏱</div>
+        <div class="perk-text"><strong>Flexible scheduling</strong>Book, reschedule, or cancel up to 12 hours before</div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3>Book a session</h3>
+      <form id="booking-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <input type="hidden" name="subject" value="New Session Booking — EssayConsultant">
+        <input type="checkbox" name="botcheck" style="display:none">
+        <input type="hidden" name="redirect" value="false">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="first_name" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="last_name" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="jane@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="(607) 555-0123">
+        </div>
+        <div class="form-group">
+          <label for="subject-sel">Subject</label>
+          <select id="subject-sel" name="subject_area" required>
+            <option value="">Select a subject...</option>
+            <option>Mathematics</option>
+            <option>Science (Chemistry / Biology / Physics)</option>
+            <option>Writing & English</option>
+            <option>Coding & Computer Science</option>
+            <option>SAT / ACT / Test Prep</option>
+            <option>Languages</option>
+            <option>History & Social Studies</option>
+            <option>Music</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Preferred date</label>
+            <input type="date" id="date" name="preferred_date" required>
+          </div>
+          <div class="form-group">
+            <label for="time">Preferred time</label>
+            <select id="time" name="preferred_time" required>
+              <option value="">Select time...</option>
+              <option>8:00 AM – 9:00 AM</option>
+              <option>9:00 AM – 10:00 AM</option>
+              <option>10:00 AM – 11:00 AM</option>
+              <option>11:00 AM – 12:00 PM</option>
+              <option>12:00 PM – 1:00 PM</option>
+              <option>1:00 PM – 2:00 PM</option>
+              <option>2:00 PM – 3:00 PM</option>
+              <option>3:00 PM – 4:00 PM</option>
+              <option>4:00 PM – 5:00 PM</option>
+              <option>5:00 PM – 6:00 PM</option>
+              <option>6:00 PM – 7:00 PM</option>
+              <option>7:00 PM – 8:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="goals">What are your goals or challenges?</label>
+          <textarea id="goals" name="message" placeholder="e.g. Struggling with derivatives, need help before finals on Dec 15th..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submit-btn">Request my session →</button>
+        <div class="form-msg" id="form-msg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL (quick-book from consultant cards) -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3>Book a session</h3>
+    <div class="modal-sub" id="modal-sub">with your selected consultant</div>
+    <form id="modal-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="New Session Booking — EssayConsultant (Quick)">
+      <input type="checkbox" name="botcheck" style="display:none">
+      <input type="hidden" name="redirect" value="false">
+      <input type="hidden" name="consultant" id="modal-consultant-field">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>First name</label>
+          <input type="text" name="first_name" placeholder="Jane" required>
+        </div>
+        <div class="form-group">
+          <label>Last name</label>
+          <input type="text" name="last_name" placeholder="Smith" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" name="email" placeholder="jane@email.com" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Preferred date</label>
+          <input type="date" name="preferred_date" required>
+        </div>
+        <div class="form-group">
+          <label>Preferred time</label>
+          <select name="preferred_time" required>
+            <option value="">Select...</option>
+            <option>Morning (8–12 PM)</option>
+            <option>Afternoon (12–5 PM)</option>
+            <option>Evening (5–9 PM)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Notes for your consultant</label>
+        <textarea name="message" placeholder="What topics or goals should we focus on?"></textarea>
+      </div>
+      <button type="submit" class="submit-btn" id="modal-submit">Confirm booking →</button>
+      <div class="form-msg" id="modal-msg"></div>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="logo-f">Essay<span>Consultant</span></div>
+  <p style="margin-top:.5rem">© 2026 EssayConsultant. All rights reserved.</p>
+  <p style="margin-top:.35rem;font-size:.8rem">Form submissions powered by Web3Forms. Replace <code style="background:rgba(255,255,255,.1);padding:1px 6px;border-radius:4px">YOUR_ACCESS_KEY_HERE</code> with your key from web3forms.com</p>
+</footer>
+
+</body>
+</html>
