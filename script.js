@@ -54,3 +54,30 @@ handleForm('modal-form','modal-submit','modal-msg');
 
 const today=new Date().toISOString().split('T')[0];
 document.querySelectorAll('input[type=date]').forEach(el=>el.min=today);
+
+
+// Load the gtag script dynamically
+(function () {
+  var gtagScript = document.createElement("script");
+  gtagScript.async = true;
+  gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-GYZP8G2BZD";
+  document.head.appendChild(gtagScript);
+})();
+
+// (function() {
+//   var adScript = document.createElement('script');
+//   adScript.async = true;
+//   adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3457882836187512";
+//   adScript.crossOrigin = "anonymous";
+//   document.head.appendChild(adScript);
+// })();
+
+// Initialize dataLayer and gtag
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  window.dataLayer.push(arguments);
+}
+
+// Configure GA
+gtag("js", new Date());
+gtag("config", "G-GYZP8G2BZD");
